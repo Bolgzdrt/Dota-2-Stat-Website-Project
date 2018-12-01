@@ -1,23 +1,19 @@
 {
-  "name": "Dota-2-Stat-Website-Project",
+  "name": "mydotaapiproj",
   "version": "1.0.0",
-  "description": "Repository for a stat website for Dota 2 using the OpenDota API.",
+  "description": "Project using the open dota api",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node client/src/requests/index.js",
+    "dev": "nodemon client/src/requests/index.js",
+    "test": "mocha"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Bolgzdrt/Dota-2-Stat-Website-Project.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Bolgzdrt/Dota-2-Stat-Website-Project/issues"
-  },
-  "homepage": "https://github.com/Bolgzdrt/Dota-2-Stat-Website-Project#readme",
+  "author": "Chris Jantzen",
+  "license": "MIT",
   "dependencies": {
-    "axios": "^0.18.0"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.5"
   }
 }
