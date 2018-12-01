@@ -17,5 +17,5 @@ const getHeroesByPlayer = id => {
     console.log(err.message);
   });
 }
-
+// getHeroesByPlayer(108973831);
 module.exports = getHeroesByPlayer;
