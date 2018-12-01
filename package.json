@@ -1,0 +1,23 @@
+{
+  "name": "Dota-2-Stat-Website-Project",
+  "version": "1.0.0",
+  "description": "Repository for a stat website for Dota 2 using the OpenDota API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bolgzdrt/Dota-2-Stat-Website-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bolgzdrt/Dota-2-Stat-Website-Project/issues"
+  },
+  "homepage": "https://github.com/Bolgzdrt/Dota-2-Stat-Website-Project#readme",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}
