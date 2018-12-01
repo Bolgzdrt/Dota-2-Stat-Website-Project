@@ -2,7 +2,7 @@ const axios = require('axios');
 const baseUrl = require('./config').baseUrl;
 
 /**
- * @params: persona name (string)
+ * @params: account id (string)
  */
 const getHeroesByPlayer = id => {
   axios.get(`players/${id}/heroes`, {

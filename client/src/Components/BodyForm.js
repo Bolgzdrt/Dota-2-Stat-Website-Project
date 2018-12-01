@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import FindByPersonaName from './FindByPersonaName';
+import PlayerHeroes from './PlayerHeroes';
 
 export class BodyForm extends Component {
   constructor(props) {
@@ -8,41 +9,48 @@ export class BodyForm extends Component {
       step: 0,
       personaName: ''
     }
-    this.updateState = this.updateState.bind(this);
-  }
-  
-  componentWillReceiveProps(nextProps) {
-    console.log('BodyForm level', nextProps);
-    this.updateState(nextProps.data);
+    // this.updateState = this.updateState.bind(this);
   }
 
-  updateState(newProps) {
-    this.setState({
-      step: 1,
-      data: newProps
-    });
+  static getDerivedStateFromProps(props, state) {
+    if (props !== state.personaName) {
+      console.log(props);
+    }
+    return props;
   }
+  
+  // componentWillReceiveProps(nextProps) {
+  //   console.log('BodyForm level', nextProps);
+  //   this.updateState(nextProps.data);
+  // }
+
+  // updateState(newProps) {
+  //   this.setState({
+  //     step: 1,
+  //     data: newProps
+  //   });
+  // }
 
   render() {
     switch(this.state.step) {
       case 0:
         return (
           <div>
-            <h1>text</h1>
+            <PlayerHeroes />
           </div>
         )
       case 1:
         return (
           <div>
-            <FindByPersonaName data={this.props.data} />
+            <FindByPersonaName data={this.props.personaName} />
           </div>
         );
-        default:
-          return (
-            <div>
-              <h1>Hello from default. Probably shouldn't be here.</h1>
-            </div>
-          );
+      default:
+        return (
+          <div>
+            <h1>Hello from default. Probably shouldn't be here.</h1>
+          </div>
+        );
     }
   }
 }
